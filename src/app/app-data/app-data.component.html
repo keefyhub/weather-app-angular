@@ -1,0 +1,26 @@
+<header class="weather-header">
+    <h1>Weather API - angular</h1>
+    <h2>{{response.city.name}}, {{response.city.country}}</h2>
+</header>
+
+<div class="weather">
+    <article *ngFor="let item of ITEMS" class="weather-item">
+        <h1 class="weather-item__day">{{ item.day }}</h1>
+        <div class="weather-item__temp">{{item.temp}}&deg;C</div>
+        <p>{{ item.weather }}</p>
+        <div class="weather-item__icon">
+            <i class="wi {{ item.iconClassName }}"></i>
+        </div>
+        <div class="weather-item__wind">
+            <i class="wi icon-{{ item.windDirection }}"></i>
+            <span>{{ item.windDirection }}</span>
+            <span>{{ item.windSpeed }}mph</span>
+        </div>
+        <div class="weather-item__humidity">
+            <i class="wi wi-humidity"></i>
+            <span>{{ item.humidity }}%</span>
+        </div>
+    </article>
+</div>
+
+<!-- <pre><code>{{ ITEMS | json }}</code></pre> -->

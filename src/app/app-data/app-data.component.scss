@@ -1,0 +1,146 @@
+.weather {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+        padding: 20px;
+        width: 20%;
+
+        &__day {
+            font-size: 1.6rem;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        &__icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+
+        &__wind,
+        &__humidity {
+            * {
+                margin-left: 0.25rem;
+                margin-right: 0.25rem;
+            }
+
+            [class*="icon-"] {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+// Backgrounds - maybe use a loop
+.weather-item:nth-of-type(1) {
+    background: #e3bb88;
+}
+
+.weather-item:nth-of-type(2) {
+    background: #d89864;
+}
+
+.weather-item:nth-of-type(3) {
+    background: #c1887d;
+}
+
+.weather-item:nth-of-type(4) {
+    background: #b1695a;
+}
+
+.weather-item:nth-of-type(5) {
+    background: #644749;
+}
+
+// Icons
+.icon {
+    &-01d::before {
+        content: "\f00d";
+    }
+    &-01n::before {
+        content: "\f02e";
+    }
+
+    &-02d::before {
+        content: "\f002";
+    }
+
+    &-02n::before {
+        content: "\f086";
+    }
+
+    &-03d::before,
+    &-03n::before {
+        content: "\f041";
+    }
+
+    &-04d::before,
+    &-04n::before {
+        content: "\f013";
+    }
+
+    &-09d::before,
+    &-09n::before {
+        content: "\f01a";
+    }
+
+    &-10d::before {
+        content: "\f009";
+    }
+
+    &-10n::before {
+        content: "\f037";
+    }
+
+    &-11d::before,
+    &-11n::before {
+        content: "\f01e";
+    }
+
+    &-13d::before,
+    &-13n::before {
+        content: "\f01b";
+    }
+
+    &-50d::before,
+    &-50n::before {
+        content: "\f014";
+    }
+
+    &-N::before {
+        content: "\f058";
+    }
+
+    &-NE::before {
+        content: "\f057";
+    }
+
+    &-E::before {
+        content: "\f04d";
+    }
+
+    &-SE::before {
+        content: "\f088";
+    }
+
+    &-S::before {
+        content: "\f044";
+    }
+
+    &-SW::before {
+        content: "\f043";
+    }
+
+    &-W::before {
+        content: "\f048";
+    }
+
+    &-NW::before {
+        content: "\f087";
+    }
+}
